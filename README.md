@@ -4,6 +4,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![CPU-only](https://img.shields.io/badge/hardware-CPU--only-green.svg)]()
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://johnemekaeze-ktt-multilingual-s2t12.streamlit.app)
+
+---
+
+## 🔗 Links
+
+| Resource | URL |
+|----------|-----|
+| 🚀 Live Streamlit Demo | https://johnemekaeze-ktt-multilingual-s2t12.streamlit.app |
+| 🎥 Video Demo (Loom) | https://www.loom.com/share/e1833291887f446380681fdbd7d8e75f |
+| 💻 GitHub Repository | https://github.com/johnemekaeze/ktt-hackathon-multilingual |
+| 🤗 Model Repo (HuggingFace) | https://huggingface.co/johneze/ktt-t22-grant-matcher |
+| 🤗 Dataset Repo (HuggingFace) | https://huggingface.co/datasets/johneze/ktt-t22-grants-tenders |
 
 ---
 
@@ -24,6 +37,9 @@ python generate_data.py && python matcher.py --profile 02 --topk 5
 
 ## 🚀 Live Demo
 
+**👉 https://johnemekaeze-ktt-multilingual-s2t12.streamlit.app**
+
+Or run locally:
 ```bash
 streamlit run app.py
 ```
@@ -177,17 +193,6 @@ See [`village_agent.md`](village_agent.md) for the full offline distribution des
 - Privacy/consent plan, 90-day scale roadmap, and sample Kinyarwanda script included
 
 ---
-
-## Video Demo
-
-📹 **[Video link — add before submission]**
-
-Structure:
-- `0:00–0:30` On-camera intro
-- `0:30–1:30` Code walkthrough (`matcher.py::rank()`)
-- `1:30–2:30` Live demo: profiles 02 and 07
-- `2:30–3:30` Read FR + EN summaries aloud; walk through `village_agent.md`
-- `3:30–4:00` Three Q&A answers
 
 ---
 
