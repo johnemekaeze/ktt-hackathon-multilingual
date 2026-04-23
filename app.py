@@ -22,31 +22,40 @@ st.set_page_config(
 st.markdown("""
 <style>
 .score-bar-outer {
-    background: #e0e0e0; border-radius: 6px; height: 10px; width: 100%;
+    background: #3a3a3a; border-radius: 6px; height: 10px; width: 100%;
 }
 .score-bar-inner {
     background: linear-gradient(90deg, #2ecc71, #27ae60);
     height: 10px; border-radius: 6px;
 }
 .tender-card {
-    background: #f9f9f9; border-left: 4px solid #2ecc71;
-    padding: 14px 18px; border-radius: 6px; margin-bottom: 12px;
+    background: #1e2a1e; border-left: 4px solid #2ecc71;
+    padding: 14px 18px; border-radius: 8px; margin-bottom: 14px;
+    color: #e8f5e9;
 }
 .tender-card-fr {
-    background: #fff9f0; border-left: 4px solid #e67e22;
-    padding: 14px 18px; border-radius: 6px; margin-bottom: 12px;
+    background: #2a1e0e; border-left: 4px solid #e67e22;
+    padding: 14px 18px; border-radius: 8px; margin-bottom: 14px;
+    color: #fff3e0;
+}
+.tender-card b, .tender-card-fr b {
+    color: #ffffff;
+}
+.tender-card small, .tender-card-fr small {
+    color: #cccccc;
 }
 .badge {
     display: inline-block; padding: 2px 8px; border-radius: 10px;
     font-size: 0.75em; font-weight: bold; color: white;
     margin-right: 4px;
 }
-.badge-en  { background: #2ecc71; }
-.badge-fr  { background: #e67e22; }
-.badge-sec { background: #3498db; }
+.badge-en  { background: #27ae60; }
+.badge-fr  { background: #d35400; }
+.badge-sec { background: #2980b9; }
 .metric-box {
-    text-align: center; padding: 16px; background: #f0f4ff;
-    border-radius: 8px; margin-bottom: 8px;
+    text-align: center; padding: 16px;
+    background: #1a1f2e; border: 1px solid #2c3e6e;
+    border-radius: 8px; margin-bottom: 8px; color: #cdd8ff;
 }
 </style>
 """, unsafe_allow_html=True)

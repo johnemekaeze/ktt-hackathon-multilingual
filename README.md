@@ -130,12 +130,14 @@ score = (
 
 ## Evaluation Results
 
-| Metric | Score |
-|--------|-------|
-| MRR@5 | **0.81** |
-| Recall@5 | **0.80** |
+| Metric | MiniLM Embeddings | TF-IDF fallback |
+|--------|:-----------------:|:---------------:|
+| MRR@5 | **0.95** | 0.81 |
+| Recall@5 | **0.7667** | 0.80 |
 
-> All 10 profiles retrieved at least 2 of 3 gold matches in top 5.
+> MiniLM embeddings (default) achieve MRR@5 = 0.95 — 9 of 10 profiles have their top-1 prediction be a gold match.  
+> TF-IDF fallback activates automatically when `sentence-transformers` cannot load (e.g. Python 3.14 / DLL issues).  
+> All 10 profiles retrieved at least 2 of 3 gold matches in the top 5 under both backends.
 
 > See `eval_notebook.ipynb` for full breakdown, confusion cases, and visualisations.
 

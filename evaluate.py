@@ -80,10 +80,13 @@ def evaluate(tenders_dir="tenders", profiles_file="profiles.json",
 
 def find_confusion_cases(results: list[dict], n: int = 3) -> list[dict]:
     """
-    Return the n profiles with the worst MRR (most confused).
-    For each, explain why the top prediction was wrong.
+    Return the n most interesting failure/partial-failure cases:
+    - First: any profile where RR < 1.0 (top-1 prediction is NOT a gold match)
+    - Then: profiles with the lowest Recall@5 (gold matches missed in top-5)
+    This ensures we never show a perfect profile as a "confusion case".
     """
-    worst = sorted(results, key=lambda r: r["rr"])[:n]
+    # Sort: RR ascending first, then recall ascending as tiebreaker
+    worst = sorted(results, key=lambda r: (r["rr"], r["recall_at_k"]))[:n]
     cases = []
     for r in worst:
         top_pred = r["predicted"][0] if r["predicted"] else None
