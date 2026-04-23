@@ -145,10 +145,15 @@ score = (
 
 ## Model Hosting
 
+| Resource | URL |
+|----------|-----|
+| 🤗 Model repo (code + card) | https://huggingface.co/johneze/ktt-t22-grant-matcher |
+| 🤗 Dataset repo (tenders + profiles) | https://huggingface.co/datasets/johneze/ktt-t22-grants-tenders |
+| 🤗 Base embedding model | https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 |
+
 The multilingual embedding model is downloaded automatically from Hugging Face on first run:
 
 **`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`**
-- 🤗 https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
 - Size: ~118 MB | CPU-only | 50+ languages
 
 No checkpoint is uploaded separately — the model is pulled from the public HF Hub.
