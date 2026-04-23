@@ -10,6 +10,12 @@ import sys
 
 import streamlit as st
 
+# ── Ensure working directory is the repo root (needed on Streamlit Cloud) ────
+ROOT = os.path.dirname(os.path.abspath(__file__))
+os.chdir(ROOT)
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Multilingual Grant & Tender Matcher",
@@ -65,22 +71,23 @@ st.markdown("""
 @st.cache_resource(show_spinner="🔍 Building search index…")
 def load_engine():
     """Load tenders, build index once per session."""
-    # Ensure data exists
-    if not os.path.exists("tenders") or not os.listdir("tenders"):
-        st.warning("Generating data…")
-        exec(open("generate_data.py").read(), {})
+    # Ensure data exists — generate if missing (e.g. first Streamlit Cloud boot)
+    tenders_dir = os.path.join(ROOT, "tenders")
+    if not os.path.exists(tenders_dir) or not os.listdir(tenders_dir):
+        st.info("⏳ First run: generating synthetic dataset…")
+        import generate_data  # noqa: F401 — side-effect: writes tenders/ & profiles.json
 
     from parser import parse_all
     from ranker import build_index
 
-    tenders = parse_all("tenders")
+    tenders = parse_all(tenders_dir)
     build_index(tenders)
     return tenders
 
 
 @st.cache_data
 def load_profiles():
-    with open("profiles.json", encoding="utf-8") as f:
+    with open(os.path.join(ROOT, "profiles.json"), encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -89,8 +96,9 @@ def load_gold():
     import csv
     from collections import defaultdict
     gold = defaultdict(list)
-    if os.path.exists("gold_matches.csv"):
-        with open("gold_matches.csv", encoding="utf-8") as f:
+    gpath = os.path.join(ROOT, "gold_matches.csv")
+    if os.path.exists(gpath):
+        with open(gpath, encoding="utf-8") as f:
             for row in csv.DictReader(f):
                 gold[row["profile_id"]].append(row["tender_id"])
     return dict(gold)
@@ -299,6 +307,8 @@ else:
 st.divider()
 st.caption(
     "T2.2 · AIMS KTT Fellowship Hackathon · April 2026 · "
-    "Model: paraphrase-multilingual-MiniLM-L12-v2 (HuggingFace) · "
-    "CPU-only · < 3 min full run"
+    "Model: [paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) · "
+    "CPU-only · "
+    "[GitHub](https://github.com/johnemekaeze/ktt-hackathon-multilingual) · "
+    "[HuggingFace](https://huggingface.co/johneze/ktt-t22-grant-matcher)"
 )
