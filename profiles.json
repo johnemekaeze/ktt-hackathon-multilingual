@@ -1,0 +1,114 @@
+[
+  {
+    "id": "01",
+    "sector": "agritech",
+    "country": "Rwanda",
+    "employees": 5,
+    "languages": [
+      "en"
+    ],
+    "needs_text": "We need funding to scale our drone-based crop monitoring service for smallholder farmers.",
+    "past_funding": "World Bank small grant 2023"
+  },
+  {
+    "id": "02",
+    "sector": "healthtech",
+    "country": "Kenya",
+    "employees": 12,
+    "languages": [
+      "en"
+    ],
+    "needs_text": "Seeking grants to deploy low-cost diagnostic kits in rural health clinics.",
+    "past_funding": "None"
+  },
+  {
+    "id": "03",
+    "sector": "cleantech",
+    "country": "Senegal",
+    "employees": 3,
+    "languages": [
+      "fr"
+    ],
+    "needs_text": "Looking for financing to install solar micro-grids in off-grid communities.",
+    "past_funding": "AFD pilot grant 2022"
+  },
+  {
+    "id": "04",
+    "sector": "fintech",
+    "country": "DRC",
+    "employees": 8,
+    "languages": [
+      "fr"
+    ],
+    "needs_text": "Need capital to expand mobile money services to unbanked rural populations.",
+    "past_funding": "None"
+  },
+  {
+    "id": "05",
+    "sector": "edtech",
+    "country": "Ethiopia",
+    "employees": 20,
+    "languages": [
+      "en"
+    ],
+    "needs_text": "Seeking support to digitize secondary school curricula in underserved regions.",
+    "past_funding": "USAID seed grant 2024"
+  },
+  {
+    "id": "06",
+    "sector": "wastetech",
+    "country": "Uganda",
+    "employees": 6,
+    "languages": [
+      "en"
+    ],
+    "needs_text": "Require funding for community waste collection and composting infrastructure.",
+    "past_funding": "GIZ micro-grant 2023"
+  },
+  {
+    "id": "07",
+    "sector": "agritech",
+    "country": "Tanzania",
+    "employees": 15,
+    "languages": [
+      "sw",
+      "en"
+    ],
+    "needs_text": "Looking for grants to build an AI-powered market linkage platform for cooperatives.",
+    "past_funding": "None"
+  },
+  {
+    "id": "08",
+    "sector": "healthtech",
+    "country": "Ghana",
+    "employees": 9,
+    "languages": [
+      "en"
+    ],
+    "needs_text": "Need financing to scale telemedicine services across remote districts.",
+    "past_funding": "UNDP innovation fund 2024"
+  },
+  {
+    "id": "09",
+    "sector": "cleantech",
+    "country": "Rwanda",
+    "employees": 4,
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "needs_text": "Seeking investment to deploy wind energy solutions in arid regions.",
+    "past_funding": "EU Horizon Africa 2023"
+  },
+  {
+    "id": "10",
+    "sector": "fintech",
+    "country": "Kenya",
+    "employees": 30,
+    "languages": [
+      "en"
+    ],
+    "needs_text": "Looking for funding to launch a savings and credit cooperative platform.",
+    "past_funding": "None"
+  }
+]

@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Model cache (downloaded at runtime from HuggingFace)
+.cache/
+models/
+*.bin
+*.pt
+*.safetensors
+sentence_transformers_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Evaluation outputs (regenerated)
+evaluation_metrics.png
+score_heatmap.png
+evaluation_summary.csv
+
+# Secrets
+.env
+secrets.toml

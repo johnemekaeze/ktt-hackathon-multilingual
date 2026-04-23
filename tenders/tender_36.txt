@@ -1,0 +1,13 @@
+TITRE: Banque de Développement CEDEAO — Subvention Edtech Nº36
+ORGANISME ÉMETTEUR: Banque de Développement CEDEAO
+SECTEUR: edtech
+BUDGET: 1 000 000 USD
+DATE LIMITE: 2027-01-20
+RÉGION: Afrique Australe
+ÉLIGIBILITÉ: Startups technologiques avec un prototype validé ou un MVP.
+
+DESCRIPTION:
+Cette subvention soutient les solutions innovantes en edtech qui répondent aux principaux défis du développement à travers Afrique Australe. Les projets financés doivent démontrer un impact mesurable sur au moins 500 bénéficiaires au cours de la première année de mise en œuvre. Les candidats doivent présenter un plan de travail détaillé, une ventilation budgétaire et un cadre de suivi aligné sur les Objectifs de Développement Durable.
+
+NOTES ADMINISTRATIVES:
+Les dossiers incomplets seront disqualifiés sans préavis. L'organisme émetteur se réserve le droit d'annuler ou de modifier cet appel à tout moment. Des évaluations environnementales et sociales doivent accompagner les candidatures. Les états financiers des trois derniers exercices doivent être joints.
